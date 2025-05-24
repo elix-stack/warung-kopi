@@ -8,7 +8,6 @@ document.querySelector('#hamburger-menu').onclick = () => {
 //klik diluar hamburger = sidebar hilang
 const hamburger = document.querySelector('#hamburger-menu');
 document.addEventListener('click', function (e) {
-  e.preventDefault();
   if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove('active');
   }
