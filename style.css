@@ -14,7 +14,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
   color: #fff;
-  min-height: 2000px;
+  min-height: 3000px;
 }
 /* 1rem = 16px */
 
@@ -74,7 +74,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(img/coffee-cup.jpg);
+  background-image: url(img/hero.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -92,27 +92,29 @@ body {
 }
 .hero .content {
   padding: 1.4rem 7%;
-  max-width: 60rem;
-  /* width: 100%; */
+  /* max-width: 60rem; */
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.068);
 }
 .hero .content h1 {
   font-size: 5em;
   color: #fff;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   line-height: 1.2;
-  /* mix-blend-mode: difference; */
+  mix-blend-mode: difference;
 }
 .hero .content h1 span {
   color: var(--primary);
-  /* mix-blend-mode: difference; */
+  mix-blend-mode: difference;
 }
 .hero .content p {
+  color: #fff;
   font-size: 1.6rem;
   margin-top: 1rem;
   line-height: 1.4;
-  font-weight: 100;
+  font-weight: 200;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 1);
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 .hero .content .cta {
   margin-top: 1rem;
@@ -159,6 +161,46 @@ body {
   font-weight: 100;
   line-height: 1.6;
   margin-bottom: 0.8rem;
+}
+
+/* menu */
+.menu {
+  padding: 8rem 7% 1.4rem;
+}
+.menu h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1.5rem;
+}
+.menu h2 span {
+  color: var(--primary);
+}
+.menu p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+.menu .row .menu-card {
+  text-align: center;
+}
+.menu .row .menu-card img {
+  border-radius: 50%;
+  width: 80%;
+}
+.menu .row .menu-card .menu-card-title {
+  margin-top: 1rem auto 05rem;
+}
+.menu .row .menu-card .menu-card-price {
+  margin-bottom: 2rem;
 }
 
 /* laptop */
