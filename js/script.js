@@ -2,6 +2,7 @@
 const navbarNav = document.querySelector('.navbar-nav');
 //ketika hamburger diklik kemudian muncul sidebar, klik lagi hilang
 document.querySelector('#hamburger-menu').onclick = () => {
+  e.preventDefault();
   navbarNav.classList.toggle('active');
 };
 
