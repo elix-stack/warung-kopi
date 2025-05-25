@@ -10,11 +10,14 @@
   border: none;
   text-decoration: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
   color: #fff;
-  min-height: 4000px;
+  /* min-height: 4000px; */
 }
 /* 1rem = 16px */
 
@@ -261,6 +264,41 @@ body {
   background-color: var(--primary);
   border-radius: 1rem;
   cursor: pointer;
+}
+
+/* footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+footer .socials {
+  padding: 1rem 0;
+}
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+footer .socials a:hover {
+  color: var(--bg);
+}
+footer .links {
+  margin-bottom: 1.2rem;
+}
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+footer .links a:hover {
+  color: var(--bg);
+}
+footer .credit {
+  font-size: 0.8rem;
+}
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
 }
 
 /* laptop */
