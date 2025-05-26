@@ -71,6 +71,36 @@ body {
 #hamburger-menu {
   display: none;
 }
+/* navbar search */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+.navbar .search-form input {
+  width: 100%;
+  height: 100%;
+  font-size: 1.6rem;
+  color: var(--bg);
+  padding: 1rem;
+}
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: var(--bg);
+}
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
 
 /* hero */
 .hero {
@@ -322,7 +352,7 @@ footer .credit a {
     background-color: #fff;
     width: 23rem;
     height: 100vh;
-    transition: 0.7s;
+    transition: 0.3s;
   }
   .navbar .navbar-nav.active {
     right: 0;
@@ -339,6 +369,10 @@ footer .credit a {
   }
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
+  }
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
   }
 
   .about .row {
