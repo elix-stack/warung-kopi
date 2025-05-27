@@ -227,13 +227,15 @@ body {
 }
 .menu .row .menu-card img {
   border-radius: 50%;
-  width: 80%;
+  width: 60%;
 }
 .menu .row .menu-card .menu-card-title {
   margin-top: 1rem auto 05rem;
+  font-size: 2rem;
 }
 .menu .row .menu-card .menu-card-price {
   margin-bottom: 2rem;
+  font-size: 1.5rem;
 }
 
 /* produk */
