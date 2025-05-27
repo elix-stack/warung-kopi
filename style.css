@@ -448,6 +448,69 @@ footer .credit a {
   font-weight: 700;
 }
 
+/* modal box */
+/* item detail */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.modal-container {
+  position: relative;
+  background-color: #fefefe;
+  color: var(--bg);
+  margin: 15% auto;
+  padding: 1.2rem;
+  border: 1px solid #666;
+  width: 80%;
+  animation: animateModal 0.5s;
+}
+/* animasi modal box */
+@keyframes animateModal {
+  from {
+    top: -300%;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.modal .modal-container .close-icon {
+  position: absolute;
+  right: 1rem;
+  color: var(--bg);
+}
+.modal .modal-container .modal-content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.modal .modal-container .modal-content img {
+  height: 14rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+.modal .modal-container .modal-content p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+.modal .modal-container .modal-content a {
+  display: flex;
+  gap: 1rem;
+  width: 12rem;
+  background-color: var(--primary);
+  color: #fff;
+  margin-top: 0.4rem;
+  padding: 0.8rem 1.6rem;
+}
+
 /* laptop */
 @media (max-width: 1366px) {
   html {
@@ -519,6 +582,11 @@ footer .credit a {
   }
   .contact .row form {
     padding-top: 0;
+  }
+
+  /* modal box */
+  .modal .modal-container .modal-content {
+    flex-wrap: wrap;
   }
 }
 
