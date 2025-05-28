@@ -18,7 +18,7 @@ document.querySelector('#search-button').onclick = (e) => {
 
 // toggle class active shopping-cart
 const shoppingCart = document.querySelector('.shopping-cart');
-// ketika shopping-cart-button diklik muncul isi shopping-cart
+
 document.querySelector('#shopping-cart-button').onclick = (e) => {
   shoppingCart.classList.toggle('active');
   e.preventDefault();
