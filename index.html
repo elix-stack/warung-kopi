@@ -14,6 +14,11 @@
     />
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="style.css" />
+
+    <!-- alpine.js -->
+     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+     <!-- panggil alpine.js -->
+      <script src="src/app.js"></script>
   </head>
   <body>
     <!-- navbar -->
@@ -127,83 +132,73 @@
     </section>
 
 <!-- product -->
-<section class="products" id="products">
+<section class="products" id="products" x-data="products">
   <h2>Produk <span>Unggulan</span></h2>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, qui rem alias suscipit dolorum perferendis.</p>
 
   <div class="row">
     
+    <!-- tag template adl directives dari alpine -->
+     <!-- x-for untk looping item dan index dalam items -->
+      <!-- x-key pemanggilan index cz setiap lopping menghasilkan index yang beda -->
+    <template x-for="(item, index) in items" x-key="index">
     <div class="product-card">
       <div class="product-icons">
-        <a href="#"><i data-feather="shopping-cart"></i></a>
-        <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+        <a href="#">
+          <svg
+  width="24"
+  height="24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <use href="img/feather-sprite.svg#shopping-cart" />
+</svg>
+        </a>
+        <a href="#" class="item-detail-button">
+          <svg
+  width="24"
+  height="24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <use href="img/feather-sprite.svg#eye" />
+</svg>
+        </a>
       </div>
 
       <div class="product-image">
-        <img src="img/product-1.jpg" alt="Product 1">
+        <img :src="`img/seblak/${item.img}`" :alt="item.name">
       </div>
 
       <div class="product-content">
-        <h3>Biji Kopi 1</h3>
+        <h3 x-text="item.name"></h3>
         <div class="product-stars">
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star" class="star-full"></i>
-          <i data-feather="star"></i>
-        </div>
-        <div class="product-price">IDR 25K <span>IDR 35K</span></div>
+          <svg
+  width="24"
+  height="24"
+  fill="currentColor"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <use href="img/feather-sprite.svg#star" />
+</svg>
+</div>
+<div class="product-price" x-text="rupiah(item.price)"> </div>
       </div>
     </div>
-    
-    <div class="product-card">
-      <div class="product-icons">
-        <a href="#"><i data-feather="shopping-cart"></i></a>
-        <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
-      </div>
-
-      <div class="product-image">
-        <img src="img/product-1.jpg" alt="Product 1">
-      </div>
-
-      <div class="product-content">
-        <h3>Biji Kopi 1</h3>
-        <div class="product-stars">
-          <i data-feather="star"></i>
-          <i data-feather="star"></i>
-          <i data-feather="star"></i>
-          <i data-feather="star"></i>
-          <i data-feather="star"></i>
-        </div>
-        <div class="product-price">IDR 25K <span>IDR 35K</span></div>
-      </div>
-    </div>
-    
-    <div class="product-card">
-      <div class="product-icons">
-        <a href="#"><i data-feather="shopping-cart"></i></a>
-        <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
-      </div>
-
-      <div class="product-image">
-        <img src="img/product-1.jpg" alt="Product 1">
-      </div>
-
-      <div class="product-content">
-        <h3>Biji Kopi 1</h3>
-        <div class="product-stars">
-          <i data-feather="star"></i>
-          <i data-feather="star"></i>
-          <i data-feather="star"></i>
-          <i data-feather="star"></i>
-          <i data-feather="star"></i>
-        </div>
-        <div class="product-price">IDR 25K <span>IDR 35K</span></div>
-      </div>
-    </div>
-
-  </div>
+  </template>
+  
+</div>
 </section>
+<!-- <span x-text="item.realPrice"></span> -->
 
     <!-- contact -->
      <section class="contact" id="contact">
