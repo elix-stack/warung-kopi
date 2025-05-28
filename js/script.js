@@ -58,7 +58,7 @@ document.querySelector('.modal .modal-container .close-icon').onclick = (e) => {
   e.preventDefault();
 };
 
-// klik diluar area modal
+// klik diluar area modal-box
 // const modal = document.querySelector('#item-detail-modal'); deklarasi ini tidak perlu karena sudah ada deklarasi target yang sama sebelumnya
 
 window.onclick = (e) => {
