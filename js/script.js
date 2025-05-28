@@ -43,7 +43,7 @@ document.addEventListener('click', function (e) {
 
 // modal box
 const itemDetailModal = document.querySelector('#item-detail-modal');
-const itemDetailButtons = document.querySelectorAll('.item-detail-button');
+const itemDetailButtons = document.querySelectorAll('.product-card .product-icons .item-detail-button');
 
 itemDetailButtons.forEach((btn) => {
   btn.onclick = (e) => {
